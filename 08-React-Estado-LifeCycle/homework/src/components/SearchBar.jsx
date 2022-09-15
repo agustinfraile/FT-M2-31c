@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React from 'react';
 
 export default function SearchBar({onSearch}) {
+  // acá va tu código
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      onSearch("Cairns");
-    }}>
-      <input
-        type="text"
-        placeholder="Ciudad..."
-      />
-      <input type="submit" value="Agregar" />
-    </form>
-  );
-}
+    <>
+      <input type="text" placeholder='Buscar ciudad...' />
+      <button
+        onClick={()=>onSearch('Buscando ciudad...')}
+      >
+        Agregar
+      </button>
+    </>  
+  )
+};
