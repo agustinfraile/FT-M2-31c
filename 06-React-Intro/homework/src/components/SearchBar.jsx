@@ -6,7 +6,7 @@ export default function SearchBar({onSearch}) {
     <>
       <input type="text" placeholder='Buscar ciudad...' />
       <button
-        onClick={()=>onSearch('Buscando...')}
+        onClick={()=>onSearch('Buscando ciudad...')}
       >
         Agregar
       </button>
