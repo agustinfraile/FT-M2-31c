@@ -1,0 +1,17 @@
+.card-container {
+    display: inline-block;
+    width: 15em;
+    height: 18em;
+    background-color: rgb(231, 216, 216);
+    margin: .8em;
+}
+
+.card-container_button {
+    background-color: rgb(252, 78, 78);
+    color: #fff;
+    border: none;
+    width: 2em;
+    border-radius: 40%;
+    display: inline-block;
+    margin: 3px 85%;
+}
