@@ -2,7 +2,7 @@ import Card from './Card';
 import styles from'./cards.module.css'
 
 
-export default function Cards({cities}) {
+export default function Cards({cities, onClose}) {
   // acá va tu código
   // tip, podés usar un map
 
@@ -12,10 +12,10 @@ export default function Cards({cities}) {
           cities.map(card => 
             <Card 
               name={card.name}
-              img={card.weather[0].icon}
-              max={card.main.temp_max}
-              min={card.main.temp_min}
-              onClose={() => alert(card.name)}
+              img={card.img}
+              max={card.max}
+              min={card.min}
+              onClose={() => onClose(card.id)}
               key={card.id}
             />
           )
