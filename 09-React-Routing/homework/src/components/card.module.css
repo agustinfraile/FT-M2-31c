@@ -1,9 +1,12 @@
 .cardContainer {
     display: inline-block;
     width: 15em;
-    height: 18em;
-    background-color: rgb(231, 216, 216);
+    height: 20em;
     margin: .8em;
+    border: none;
+    border-radius: 3em;
+    padding: 0 .8em;
+    box-shadow: 2px 2px 5px 1px #ccc;
 }
 
 .cardContainer_button {
@@ -13,5 +16,5 @@
     width: 2em;
     border-radius: 40%;
     display: inline-block;
-    margin: 3px 85%;
+    margin: 8px 77%;
 }

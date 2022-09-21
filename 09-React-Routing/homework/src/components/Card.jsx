@@ -15,10 +15,6 @@ export default function Card({max, min, name, img, onClose, id}) {
         X
       </button>
 
-      {/* <div>
-        <h4>{name}</h4>
-      </div> */}
-
       <Link to={`/ciudad/${id}`} >
         <h4>{name}</h4>
       </Link>
@@ -28,11 +24,11 @@ export default function Card({max, min, name, img, onClose, id}) {
       </div>
 
       <div>
-        <p>Maxima: {max}</p>
+        <p>Máxima: {max}ºC</p>
       </div>
       
       <div>
-        <p>Minima: {min}</p>
+        <p>Mínima: {min}ºC</p>
       </div>
       
     </div>

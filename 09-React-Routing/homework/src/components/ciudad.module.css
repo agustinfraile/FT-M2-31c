@@ -1,0 +1,26 @@
+.cityContainer {
+    /* background-color: aqua; */
+    width: 100%;
+    height: auto;
+    padding: .7em;
+}
+
+.cityContainer h2 {
+    /* background-color: blanchedalmond; */
+    font-size: 2.2em;
+}
+
+.cityContainer_info {
+    /* background-color: burlywood; */
+}
+
+.cityContainer_info_temp,
+.cityContainer_info_weather,
+.cityContainer_info_wind,
+.cityContainer_info_clouds,
+.cityContainer_info_lat,
+.cityContainer_info_long {
+    /* background-color: beige; */
+    font-size: 1.3em;
+    box-shadow: 2px 2px 4px 2px #ccc;
+}
