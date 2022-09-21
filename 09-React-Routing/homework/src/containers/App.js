@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Route } from 'react-router-dom';
+import About from '../components/About.jsx';
 import Cards from '../components/Cards.jsx';
 import NavBar from '../components/NavBar.jsx';
 
@@ -42,15 +44,22 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <NavBar onSearch={onSearch} />
-      </div>
-      <div>
-        <Cards
-          cities={cities}
-          onClose={id => onClose(id)}
-        />
-      </div>
+
+      <Route
+          path='/'
+          render={() => <NavBar onSearch={onSearch} />}
+      />
+      
+      <Route
+        path='/about'
+        component={About}
+      />
+
+      <Route
+        path='/'
+        render={() => <Cards cities={cities} onClose={id => onClose(id)}/>}
+      />
+
       <hr />
     </div>
   );
