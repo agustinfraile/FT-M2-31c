@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Route } from 'react-router-dom';
 import About from '../components/About.jsx';
 import Cards from '../components/Cards.jsx';
+import Ciudad from '../components/Ciudad.jsx';
 import NavBar from '../components/NavBar.jsx';
 
 import './App.css';
@@ -41,6 +42,15 @@ function App() {
     function onClose(id) {
       setCities(oldCities => oldCities.filter(c => c.id != id));
     }
+    
+    function onFilter(ciudadId) {
+      let ciudad = cities.filter(c => c.id === parseInt(ciudadId));
+      if(ciudad.length > 0) {
+          return ciudad[0];
+      } else {
+          return null;
+      }
+    }
 
   return (
     <div className="App">
@@ -56,9 +66,17 @@ function App() {
       />
 
       <Route
-        path='/'
-        render={() => <Cards cities={cities} onClose={id => onClose(id)}/>}
+        exact path='/'
+        render={() => <Cards  cities={cities} onClose={id => onClose(id)}/>}
       />
+
+      <Route
+          exact
+          path='/ciudad/:ciudadId'
+          render={({match}) => <Ciudad
+          city={onFilter(match.params.ciudadId) }
+          />}
+        />
 
       <hr />
     </div>
