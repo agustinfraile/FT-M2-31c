@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export function validate(input) {
   let errors = {};
@@ -18,7 +18,7 @@ export function validate(input) {
 };
 
 
-export default function  Form() {
+export default function Form() {
 
   const [input, setInput] = React.useState({
     username: '',
@@ -30,7 +30,7 @@ export default function  Form() {
   const handleInputChange = function(e) {
     setInput({
       ...input,
-      [e.target.name]: e.taret.value
+      [e.target.name]: e.target.value
     });
 
     setErrors(validate({
@@ -39,14 +39,12 @@ export default function  Form() {
     }));
   }
 
-  // const onSubmit=(e) => {
-  //   e.preventDefault();
-  // }
-
 
   return (
     <form>
+
       <div>
+
         <label>Username:</label>
         <input 
           className={errors.username && 'danger'}
@@ -57,8 +55,11 @@ export default function  Form() {
         {errors.username && (
           <p className="danger">{errors.username}</p>
         )}
+
       </div>
+
       <div>
+
         <label>Password</label>
         <input 
           className={errors.password && 'danger'}
@@ -69,9 +70,11 @@ export default function  Form() {
         {errors.password && (
           <p className="danger">{errors.password}</p>
         )}
+
       </div>
 
       <input type="submit" value='Agregar' />
+
     </form>
   )
 }
