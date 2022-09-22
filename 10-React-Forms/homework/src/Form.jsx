@@ -60,7 +60,7 @@ export default function Form() {
 
       <div>
 
-        <label>Password</label>
+        <label>Password:</label>
         <input 
           className={errors.password && 'danger'}
           type="password" name="password" 
