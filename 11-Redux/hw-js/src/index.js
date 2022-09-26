@@ -36,4 +36,7 @@ const botonAsync = document.getElementById("incrementoAsync");
 botonIncremento.onclick = () => store.dispatch(incremento());
 botonDecremento.onclick = () => store.dispatch(decremento());
 botonImpar.onclick = () => store.dispatch(incrementoImpar());
-botonAsync.onclick = () => store.dispatch(setTimeout(incrementoAsync(),3000));
+
+botonAsync.onclick = () => ( setTimeout(() => {
+  store.dispatch(incrementoAsync())
+}, 2000) );
